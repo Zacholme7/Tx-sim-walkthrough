@@ -8,5 +8,6 @@ edition = "2021"
 alloy = { version = "0.7", features = ["contract", "dyn-abi", "providers", "sol-types"] }
 anyhow = "1.0.96"
 chrono = "0.4.39"
+node-db = { git = "https://github.com/Zacholme7/NodeDB" }
 revm = { version = "19.5.0", features = ["alloydb"] }
 tokio = { version = "1.43.0", features = ["full"] }
