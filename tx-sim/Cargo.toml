@@ -5,7 +5,8 @@ edition = "2021"
 
 
 [dependencies]
-alloy = "0.11.1"
+alloy = { version = "0.7", features = ["contract", "dyn-abi", "providers", "sol-types"] }
 anyhow = "1.0.96"
 chrono = "0.4.39"
+revm = { version = "19.5.0", features = ["alloydb"] }
 tokio = { version = "1.43.0", features = ["full"] }
