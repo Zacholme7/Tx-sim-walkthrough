@@ -3,6 +3,9 @@ name = "tx-sim"
 version = "0.1.0"
 edition = "2021"
 
+[[bin]]
+path = "examples/rpc.rs"
+name = "rpc"
 
 [dependencies]
 alloy = { version = "0.7", features = ["contract", "dyn-abi", "providers", "sol-types"] }
