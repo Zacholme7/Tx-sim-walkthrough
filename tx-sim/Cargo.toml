@@ -4,8 +4,24 @@ version = "0.1.0"
 edition = "2021"
 
 [[bin]]
-path = "examples/rpc.rs"
+path = "src/rpc.rs"
 name = "rpc"
+
+[[bin]]
+path = "src/revm-rpc.rs"
+name = "revm-rpc"
+
+[[bin]]
+path = "src/revm-reth.rs"
+name = "revm-reth"
+
+[[bin]]
+path = "src/revm-local.rs"
+name = "revm-local"
+
+[[bin]]
+path = "src/curve-sim.rs"
+name = "curve"
 
 [dependencies]
 alloy = { version = "0.7", features = ["contract", "dyn-abi", "providers", "sol-types"] }
@@ -14,3 +30,9 @@ chrono = "0.4.39"
 node-db = { git = "https://github.com/Zacholme7/NodeDB" }
 revm = { version = "19.5.0", features = ["alloydb"] }
 tokio = { version = "1.43.0", features = ["full"] }
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"
